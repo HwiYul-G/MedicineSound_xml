@@ -1,4 +1,8 @@
 package com.Y.medicinesound_xml
 
-class MedicineSoundApp {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class MedicineSoundApp : Application(){
 }
