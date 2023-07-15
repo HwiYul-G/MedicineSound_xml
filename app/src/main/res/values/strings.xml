@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MedicineSound_xml</string>
+    <string name="app_name_ko">약소리</string>
+    <string name="app_name_en">MedicineSound</string>
 </resources>

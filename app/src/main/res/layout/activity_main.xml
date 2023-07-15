@@ -4,15 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/backgroundColor"
+    tools:context=".views.activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <include
+        layout="@layout/toolbar_basic"
+        app:layout_constraintBottom_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        android:background="@drawable/img_medicines"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_basic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/button_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:padding="12dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="사진찍기"
+            android:textSize="24dp"
+            android:drawableLeft="@drawable/icon_camera_white"
+            android:tint="@android:color/white"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"/>
+        <Button
+            android:id="@+id/button_recognize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="인식하기"
+            android:textSize="24dp"
+            android:drawableLeft="@drawable/icon_camera_white"
+            android:tint="@android:color/white"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"/>
+        <Button
+            android:id="@+id/button_extract"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="정보 추출"
+            android:textSize="24dp"
+            android:drawableLeft="@drawable/icon_camera_white"
+            android:tint="@android:color/white"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="12dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="제품명"/>
+        <TextView
+            android:id="@+id/textview_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="인식된 제품명"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="효능 및 효과"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="추출된 정보"/>
+
+
+    </LinearLayout>
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
